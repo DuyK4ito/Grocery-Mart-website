@@ -1,46 +1,47 @@
 # Grocery Mart Website (Frontend Project)
 
-## Giới thiệu
+## Introduction
 
-Grocery Mart là một dự án frontend cá nhân được xây dựng nhằm luyện tập kỹ năng HTML, CSS, SCSS và JavaScript cơ bản.  
-Dự án tập trung vào việc cắt giao diện từ thiết kế có sẵn, xây dựng layout rõ ràng, responsive và tổ chức code theo cấu trúc dễ bảo trì.
+Grocery Mart is a personal frontend project built to practice HTML, CSS, SCSS, and basic JavaScript skills.
 
-Dự án được thực hiện trong quá trình tự học và chuẩn bị cho kỳ thực tập Frontend.
+The project focuses on slicing UI from an available design, building a clean layout, implementing responsive design, and organizing source code in a maintainable structure.
 
----
-
-## Mục tiêu dự án
-
--   Luyện tập HTML5 semantic và cấu trúc layout chuẩn
--   Sử dụng SCSS để tổ chức CSS theo mô hình module
--   Thực hành responsive web design
--   Làm quen với quy trình làm việc với Git/GitHub
--   Áp dụng JavaScript cơ bản cho các tương tác UI
+This project was developed during my self-study process to prepare for a Frontend Internship.
 
 ---
 
-## Công nghệ sử dụng
+## Project Objectives
+
+-   Practice semantic HTML5 and clean layout structure
+-   Organize CSS using SCSS modular architecture
+-   Implement responsive web design
+-   Get familiar with Git/GitHub workflow
+-   Apply basic JavaScript for UI interactions
+
+---
+
+## Technologies Used
 
 -   **HTML5**
 -   **CSS3**
 -   **SCSS**
 -   **JavaScript (Basic)**
 -   **Git & GitHub**
--   **Figma** (dùng để tham khảo và cắt giao diện)
+-   **Figma** (UI reference & slicing)
 
 ---
 
-## Tính năng chính
+## Key Features
 
--   Giao diện website bán hàng (Grocery Mart)
--   Thanh điều hướng với menu nhiều cấp (dropdown)
--   Layout chia cột rõ ràng
--   Responsive trên các kích thước màn hình
--   Tổ chức SCSS theo folder (base, components, layout, theme…)
+-   Grocery e-commerce website interface
+-   Navigation bar with multi-level dropdown menu
+-   Clear and structured layout
+-   Fully responsive on multiple screen sizes
+-   SCSS organized by folders (base, components, layout, theme)
 
 ---
 
-## Cấu trúc thư mục
+## Project Structure
 
 ```bash
 assets/
@@ -56,15 +57,24 @@ scss/
 index.html
 header.html
 footer.html
+```
 
+## How to run project
 
-## Cách chạy dự án
-1. Clone project - Git bash
+1. Clone project
 
-- git clone https://github.com/your-username/grocery-mart-project.git
+```bash
+git clone https://github.com/your-username/grocery-mart-project.git
+```
 
-2. Cài đặt dependencies:
+2. Install dependencies:
 
-- npm install
-- npm run sass
+```bash
+npm install
+```
+
+3. Run Sass
+
+```bash
+npm run sass
 ```
