@@ -1,0 +1,25 @@
+{
+  "name": "grocery-mart-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss:assets/css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuyK4ito/Grocery-Mart-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DuyK4ito/Grocery-Mart-website/issues"
+  },
+  "homepage": "https://github.com/DuyK4ito/Grocery-Mart-website#readme",
+  "devDependencies": {
+    "sass": "^1.64.2"
+  }
+}
