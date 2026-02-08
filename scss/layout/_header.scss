@@ -1,0 +1,151 @@
+@use "../abstracts";
+
+%flexItemsCenter {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background: var(--header-bg-color);
+
+    @include abstracts.breakpoint(md) {
+        box-shadow: var(--header-shadow-color);
+    }
+}
+
+.top-bar {
+    @extend %flexItemsCenter;
+    position: relative;
+    padding: 30px 0;
+
+    &__drawer {
+        display: none;
+    }
+}
+
+@include abstracts.breakpoint(lg) {
+    .top-bar {
+        padding: 20px 0;
+
+        &__drawer {
+            display: block;
+        }
+    }
+}
+
+@include abstracts.breakpoint(md) {
+    .top-bar {
+        justify-content: space-between;
+        padding: 16px 0;
+    }
+}
+
+// -- NAVIGATION -- //
+.navbar {
+    margin-left: 129px;
+
+    &__list {
+        @extend %flexItemsCenter;
+    }
+
+    &__item {
+        &:hover .dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__link {
+        @extend %flexItemsCenter;
+        gap: 6px;
+        height: 50px;
+        padding: 0 15px;
+
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.46;
+    }
+
+    &__arrow {
+        margin-top: 3px;
+    }
+}
+
+@include abstracts.breakpoint(xl) {
+    .navbar {
+        margin-left: 28px;
+    }
+}
+
+@include abstracts.breakpoint(lg) {
+    .navbar {
+        display: none;
+    }
+}
+//////////////////////////////////////////////////
+.top-act {
+    @extend %flexItemsCenter;
+    column-gap: 20px;
+    margin-left: auto;
+
+    &__group {
+        @extend %flexItemsCenter;
+
+        min-width: 50px;
+        height: 50px;
+
+        border-radius: 8px;
+        background: var(--top-act-group-bg-color);
+        box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
+    }
+
+    &__group--single {
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
+    }
+
+    &__group--single &__btn {
+        padding: 13px;
+    }
+
+    &__btn {
+        @extend %flexItemsCenter;
+        padding: 13px 20px;
+        column-gap: 10px;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.46;
+    }
+
+    &__seperate {
+        width: 1px;
+        height: 30px;
+        background: var(--top-act-group-seperate);
+    }
+
+    &__avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        display: block;
+    }
+}
+
+@include abstracts.breakpoint(md) {
+    .top-act {
+        margin-left: 0;
+    }
+}
+
+@include abstracts.breakpoint(md) {
+    .top-act {
+        &__group {
+            display: none;
+        }
+    }
+}
