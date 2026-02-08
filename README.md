@@ -64,7 +64,7 @@ footer.html
 1. Clone project
 
 ```bash
-git clone https://github.com/your-username/grocery-mart-project.git
+https://github.com/DuyK4ito/Grocery-Mart-website.git
 ```
 
 2. Install dependencies:
