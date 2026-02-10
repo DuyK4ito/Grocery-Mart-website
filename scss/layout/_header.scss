@@ -17,20 +17,6 @@
     @extend %flexItemsCenter;
     position: relative;
     padding: 30px 0;
-
-    &__drawer {
-        display: none;
-    }
-}
-
-@include abstracts.breakpoint(lg) {
-    .top-bar {
-        padding: 20px 0;
-
-        &__drawer {
-            display: block;
-        }
-    }
 }
 
 @include abstracts.breakpoint(md) {
@@ -69,6 +55,11 @@
     &__arrow {
         margin-top: 3px;
     }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 
 @include abstracts.breakpoint(xl) {
@@ -79,7 +70,63 @@
 
 @include abstracts.breakpoint(lg) {
     .navbar {
-        display: none;
+        position: fixed;
+        inset: 0 50% 0 0;
+        z-index: 4;
+
+        padding: 20px 0;
+        margin-left: 0;
+        background: #fff;
+
+        translate: -100%;
+        transition: translate 0.5s ease;
+
+        &.show {
+            translate: 0;
+        }
+
+        &.show + &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &__close-btn {
+            padding: 10px 40px;
+        }
+
+        &__overlay {
+            visibility: hidden;
+            opacity: 0;
+            position: fixed;
+            inset: 0;
+            z-index: 3;
+
+            transition: opacity, visibility;
+            transition-duration: 0.5 ease;
+
+            background: rgba($color: #000000, $alpha: 0.4);
+        }
+
+        &__list {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &__item {
+            width: 100%;
+
+            &:hover .dropdown {
+                display: none;
+            }
+        }
+
+        &__link {
+            justify-content: space-between;
+            padding: 0 40px;
+
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
     }
 }
 //////////////////////////////////////////////////
@@ -97,12 +144,6 @@
         border-radius: 8px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
-    }
-
-    &__group--single {
-        @include abstracts.breakpoint(lg) {
-            display: none;
-        }
     }
 
     &__group--single &__btn {
@@ -139,13 +180,5 @@
 @include abstracts.breakpoint(md) {
     .top-act {
         margin-left: 0;
-    }
-}
-
-@include abstracts.breakpoint(md) {
-    .top-act {
-        &__group {
-            display: none;
-        }
     }
 }
