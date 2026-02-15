@@ -39,6 +39,34 @@
             load("#header", "./templates/header.html");
         </script>
         <div class="container">
+            <div class="swiper slideshow">
+                <div class="swiper-wrapper slideshow__inner">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide slideshow__item">
+                        <a href="#!" class="slidershow__link">
+                            <picture>
+                                <source
+                                    media="(max-width: 767.98px)"
+                                    srcset="
+                                        ./assets/img/slideshow/item-1-md.png
+                                    "
+                                />
+                                <img
+                                    src="./assets/img/slideshow/item-1.png"
+                                    alt=""
+                                    class="slideshow__img"
+                                />
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slideshow__page">
+                    <span class="slideshow__num">1</span>
+                    <span class="slideshow__slider"></span>
+                    <span class="slideshow__num">5</span>
+                </div>
+            </div>
             <button
                 id="changeTheme"
                 style="
