@@ -6,7 +6,7 @@ $list-breakpoints: (
     xxl: 1280px,
 );
 
-@mixin breakpoint($key) {
+@mixin screen($key) {
     $breakpoint: map-get($list-breakpoints, $key);
     @if ($breakpoint) {
         @media (max-width: ($breakpoint - 0.02)) {
