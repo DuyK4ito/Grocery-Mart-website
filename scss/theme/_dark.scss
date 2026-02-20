@@ -51,4 +51,16 @@ html.dark {
     --filter-form-tag-bg: #171c28;
     --filter-form-arrow: brightness(0) saturate(100%) invert(14%) sepia(8%)
         saturate(792%) hue-rotate(179deg) brightness(94%) contrast(84%);
+
+    // Auth
+    --auth-intro-bg: #171c28;
+    --auth-content-bg: #292e39;
+
+    --auth-intro-text-color: #b9babe;
+
+    --auth-content-heading: #b9babe;
+    --auth-desc-color: #9e9da8;
+    --auth-link-color: #0071dc;
+
+    --form-placeholder-color: #b9babe;
 }
