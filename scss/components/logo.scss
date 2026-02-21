@@ -10,22 +10,4 @@
         font-weight: 700;
         line-height: 1.45;
     }
-
-    @include abstracts.screen(lg) {
-        gap: 10px;
-        margin-left: 40px;
-
-        &__title {
-            font-size: 1.8rem;
-        }
-
-        &__img {
-            display: block;
-            width: 24px;
-        }
-    }
-
-    @include abstracts.screen(md) {
-        margin-left: 0;
-    }
 }
