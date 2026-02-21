@@ -189,3 +189,24 @@ window.addEventListener("template-loaded", () => {
         };
     });
 });
+
+// Product detail
+document.addEventListener("DOMContentLoaded", function () {
+    const tabItems = document.querySelectorAll(".prod-tab__item");
+    const tabContents = document.querySelectorAll(".prod-tab__content");
+
+    tabItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            tabItems.forEach((tab) =>
+                tab.classList.remove("prod-tab__item--current")
+            );
+
+            tabContents.forEach((content) =>
+                content.classList.remove("prod-tab__content--current")
+            );
+
+            item.classList.add("prod-tab__item--current");
+            tabContents[index].classList.add("prod-tab__content--current");
+        });
+    });
+});
