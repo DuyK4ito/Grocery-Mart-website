@@ -191,7 +191,7 @@ window.addEventListener("template-loaded", () => {
 });
 
 // Product detail
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("template-loaded", function () {
     const tabItems = document.querySelectorAll(".prod-tab__item");
     const tabContents = document.querySelectorAll(".prod-tab__content");
 

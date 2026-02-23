@@ -1,4 +1,9 @@
+@use "../abstracts";
+
 .review-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 30px;
     border-radius: 16px;
     background: var(--review-card-bg);
@@ -6,6 +11,7 @@
     &__content {
         display: flex;
         gap: 20px;
+        margin-bottom: 20px;
     }
 
     &__avatar {
@@ -32,7 +38,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        margin-top: 20px;
+        margin-top: auto;
 
         &-title {
             margin-left: 12px;
@@ -40,6 +46,35 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 144.444%;
+        }
+    }
+
+    &__star-list {
+        display: flex;
+        gap: 8px;
+    }
+
+    @include abstracts.screen(xl) {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__rating {
+            flex-direction: column;
+        }
+    }
+
+    @include abstracts.screen(md) {
+        &__content {
+            flex-direction: row;
+            align-items: initial;
+            text-align: initial;
+        }
+
+        &__rating {
+            flex-direction: row;
         }
     }
 }

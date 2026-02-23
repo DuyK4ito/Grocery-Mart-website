@@ -239,6 +239,12 @@
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 145.455%;
+        user-select: none;
+        white-space: nowrap;
+
+        &:not(&--current) {
+            cursor: pointer;
+        }
 
         &--current {
             color: inherit;
@@ -256,14 +262,30 @@
             display: block;
         }
     }
+
+    &__text-content {
+        margin-top: -20px;
+    }
+
+    @include abstracts.screen(md) {
+        &__list {
+            margin: 0 -20px;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            padding: 8px 20px;
+            font-size: 1.8rem;
+        }
+    }
 }
 
 .prod-content {
     &__heading {
         margin-bottom: 30px;
 
-        font-size: 2.4rem;
-        font-weight: 700;
+        font-size: 2.2rem;
+        font-weight: 600;
         line-height: 141.667%;
     }
 }
