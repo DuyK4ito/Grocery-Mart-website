@@ -108,6 +108,12 @@
             margin-top: -16px;
         }
     }
+
+    @include abstracts.screen(sm) {
+        &__continue-link {
+            font-size: inherit;
+        }
+    }
 }
 
 .cart-info + .cart-info {

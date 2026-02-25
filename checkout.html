@@ -397,7 +397,7 @@
                                 </div>
                                 <div class="cart-info__bottom">
                                     <div class="row">
-                                        <div class="col-8 col-xxl-7">
+                                        <div class="col-8 col-xxl-7 col-sm-12">
                                             <div class="cart-info__continue">
                                                 <a
                                                     href="./index-logined.html"
@@ -412,7 +412,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-4 col-xxl-5">
+                                        <div class="col-4 col-xxl-5 d-sm-none">
                                             <div class="cart-info__row">
                                                 <span>Subtotal:</span>
                                                 <span>$191.65</span>
@@ -505,21 +505,21 @@
             load("#footer", "./templates/footer.html");
         </script>
 
-        <!-- Dialog / modal -->
-        <div id="delete-confirm" class="dialog hide">
-            <div class="dialog__content">
-                <div class="dialog__text">
-                    Are you sure want to remove this item?
-                </div>
-                <div class="dialog__bottom">
+        <!-- modal -->
+        <div id="delete-confirm" class="modal hide">
+            <div class="modal__content modal__content--confirm">
+                <p class="modal__text" style="font-size: 2rem">
+                    <b>Are you sure want to remove this item?</b>
+                </p>
+                <div class="modal__bottom">
                     <button
-                        class="btn btn--small btn--text dialog__btn js-toggle"
+                        class="btn btn--small btn--text modal__btn js-toggle"
                         toggle-target="#delete-confirm"
                     >
                         Cancel
                     </button>
                     <button
-                        class="btn btn--small btn--primary dialog__btn btn--no-margin js-toggle"
+                        class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
                         toggle-target="#delete-confirm"
                     >
                         Confirm
@@ -527,7 +527,7 @@
                 </div>
             </div>
             <div
-                class="dialog__overlay js-toggle"
+                class="modal__overlay js-toggle"
                 toggle-target="#delete-confirm"
             ></div>
         </div>
