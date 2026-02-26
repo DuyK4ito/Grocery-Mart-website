@@ -70,6 +70,9 @@ html.dark {
 
     // Forms
     --form-placeholder-color: #b9babe;
+    --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+    --form-select-dialog-bg: #2f3237;
+    --form-option-hover-bg: #292e39;
 
     // Product detail page
     --product-detail-bg: #292e39;
@@ -107,6 +110,6 @@ html.dark {
     --checkout-gift-shadow: rgba(23, 28, 40, 0.2);
 
     // Dialog
-    --dialog-bg: #2f3441;
+    --dialog-bg: #2f3237;
     --dialog-shadow: rgba(23, 28, 40, 0.4);
 }
